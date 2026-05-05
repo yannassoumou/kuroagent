@@ -40,6 +40,46 @@ L'add-in ajoute des fonctions personnalisées dans Excel qui permettent de faire
 
 Les paramètres sont sauvegardés localement dans votre navigateur.
 
+## Excel JavaScript API — Fonctionnalités supportées
+
+L'add-in utilise l'Excel JavaScript API (Office.js). Voici le support des fonctionnalités :
+
+### Supportées
+
+| Fonctionnalité | Statut | Classes principales |
+|---|---|---|
+| **PivotTables** | ✅ Supporté | `PivotTable`, `PivotHierarchy`, `PivotField`, `PivotItem`, `PivotLayout`, `PivotFilter` |
+| **Graphiques (Charts)** | ✅ Supporté | `Chart`, `ChartSeries`, `ChartAxis`, `ChartDataLabel`, `ChartTrendline` |
+| **Tableaux** | ✅ Supporté | `Table`, `TableColumn`, `TableRow`, `TableSort`, `AutoFilter`, `Filter` |
+| **Cellules / Ranges** | ✅ Supporté (core) | `Range`, `RangeAreas`, `RangeFormat`, `RangeFont`, `RangeFill`, `RangeBorder` |
+| **Feuilles (Worksheets)** | ✅ Supporté | `Worksheet`, `WorksheetCollection`, `WorksheetProtection`, `PageLayout` |
+| **Classeurs (Workbooks)** | ✅ Supporté | `Workbook`, `Application`, `NamedItem`, `Setting`, `CustomProperty` |
+| **Formatage** | ✅ Supporté | `RangeFormat`, `RangeFont`, `RangeFill`, `RangeBorder`, `Style` |
+| **Formatage conditionnel** | ✅ Supporté | `ConditionalFormat`, `ColorScaleConditionalFormat`, `DataBarConditionalFormat`, `IconSetConditionalFormat` |
+| **Formes (Shapes)** | ✅ Supporté | `Shape`, `GeometricShape`, `Image`, `Line`, `ShapeGroup`, `TextFrame` |
+| **Validation de données** | ✅ Supporté | `DataValidation`, `DataValidationRule`, `BasicDataValidation`, `DateTimeDataValidation` |
+| **Segments (Slicers)** | ✅ Supporté | `Slicer`, `SlicerItem`, `SlicerStyle` |
+| **Commentaires / Notes** | ✅ Supporté | `Comment`, `CommentReply`, `Note` |
+| **Fonctions personnalisées** | ✅ Supporté | `CustomFunctionManager` |
+| **Données liées (Linked Entities)** | ✅ Supporté | `LinkedEntityDataDomain`, `EntityCellValue` |
+| **Power Query** | ✅ Supporté | `Query`, `QueryCollection` |
+| **Contrôles de cellules** | ✅ Supporté | `CheckboxCellControl` |
+| **Calcul itératif** | ✅ Supporté | `IterativeCalculation` |
+
+### Non supportées / Limitations
+
+| Fonctionnalité | Statut | Notes |
+|---|---|---|
+| **PivotTables OLAP** | ❌ Non supporté | Seuls les PivotTables standards sont supportés |
+| **Power Pivot** | ❌ Non supporté | Pas d'accès aux données Power Pivot |
+| **Sparklines** | ❌ Pas dans l'API | Aucune classe `Sparkline` n'existe |
+| **VBA / Macros** | ❌ Pas dans l'API | Impossible d'exécuter ou créer des macros VBA |
+| **SmartArt** | ❌ Pas dans l'API | Pas de création ou manipulation de SmartArt |
+| **Content Controls** | ❌ Pas dans l'API | Rich Text Content Controls non accessibles |
+| **Onglets ruban intégrés** | ❌ Limité | Accès uniquement au ruban personnalisé via manifest |
+| **Groupe de feuilles** | ❌ Pas dans l'API | Pas de classe `WorksheetGroup` |
+| **Sauvegarde explicite** | ❌ Auto-save | Excel gère la sauvegarde automatiquement |
+
 ---
 
 Développé par [Yann Assoumou](https://github.com/yannassoumou) — open source sous MIT License.
