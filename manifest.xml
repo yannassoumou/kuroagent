@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>14254940-5dfe-46ec-b860-a8291f526990</Id>
-  <Version>1.0.6.1</Version>
+  <Version>1.0.7.1</Version>
   <ProviderName>KuroAgent</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="KuroAgent — AI in Excel"/>
+  <DisplayName DefaultValue="KuroAgent — AI in Excel-v1.0.7"/>
   <Description DefaultValue="AI-powered Excel add-in. Chat with your favorite LLM directly in your spreadsheets. Powered by Yann Assoumou."/>
   <IconUrl DefaultValue="https://excel-ten-theta.vercel.app/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://excel-ten-theta.vercel.app/assets/icon-64.png"/>
