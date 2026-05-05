@@ -2,15 +2,15 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>14254940-5dfe-46ec-b860-a8291f526990</Id>
   <Version>1.0.6.1</Version>
-  <ProviderName>Contoso</ProviderName>
+  <ProviderName>KuroAgent</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="exceljs-main-v1.0.6"/>
-  <Description DefaultValue="Write your own Excel functions in JavaScript."/>
+  <DisplayName DefaultValue="KuroAgent — AI in Excel"/>
+  <Description DefaultValue="AI-powered Excel add-in. Chat with your favorite LLM directly in your spreadsheets using OpenRouter API.</Description>
   <IconUrl DefaultValue="https://excel-ten-theta.vercel.app/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://excel-ten-theta.vercel.app/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <SupportUrl DefaultValue="https://github.com/yannassoumou/excel/issues"/>
   <AppDomains>
-    <AppDomain>https://www.contoso.com</AppDomain>
+    <AppDomain>https://excel-ten-theta.vercel.app</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Workbook"/>
@@ -41,7 +41,7 @@
             <Namespace resid="Functions.Namespace"/>
           </ExtensionPoint>
         </AllFormFactors>
-        <DesktopFormFactor>
+      <DesktopFormFactor>
           <GetStarted>
             <Title resid="GetStarted.Title"/>
             <Description resid="GetStarted.Description"/>
@@ -76,7 +76,7 @@
               </Group>
             </OfficeTab>
           </ExtensionPoint>
-        </DesktopFormFactor>
+      <DesktopFormFactor>
       </Host>
     </Hosts>
     <Resources>
@@ -89,19 +89,19 @@
         <bt:Url id="Functions.Script.Url" DefaultValue="https://excel-ten-theta.vercel.app/functions.js"/>
         <bt:Url id="Functions.Metadata.Url" DefaultValue="https://excel-ten-theta.vercel.app/functions.json"/>
         <bt:Url id="Functions.Page.Url" DefaultValue="https://excel-ten-theta.vercel.app/functions.html"/>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/yannassoumou/excel"/>
         <bt:Url id="Commands.Url" DefaultValue="https://excel-ten-theta.vercel.app/commands.html"/>
         <bt:Url id="Taskpane.Url" DefaultValue="https://excel-ten-theta.vercel.app/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="Functions.Namespace" DefaultValue="CONTOSO"/>
-        <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
+        <bt:String id="Functions.Namespace" DefaultValue="KUROAGENT"/>
+        <bt:String id="GetStarted.Title" DefaultValue="KuroAgent — AI in Excel"/>
         <bt:String id="CommandsGroup.Label" DefaultValue="KuroAgent"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Task Pane"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Open KuroAgent"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded successfully. Go to the HOME tab and click the 'Show Task Pane' button to get started."/>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show a Task Pane"/>
+        <bt:String id="GetStarted.Description" DefaultValue="Connect your OpenRouter API key and chat with any LLM directly in Excel. Powered by Yann Assoumou."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Open KuroAgent panel to chat with AI"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
