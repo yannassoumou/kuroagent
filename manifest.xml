@@ -4,11 +4,11 @@
   <Version>1.0.8.1</Version>
   <ProviderName>KuroAgent</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="KuroAgent — AI in Excel-v1.0.8"/>
+  <DisplayName DefaultValue="KuroAgent — AI in Excel"/>
   <Description DefaultValue="AI-powered Excel add-in. Chat with your favorite LLM directly in your spreadsheets. Powered by Yann Assoumou."/>
   <IconUrl DefaultValue="https://excel-ten-theta.vercel.app/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://excel-ten-theta.vercel.app/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://github.com/yannassoumou/excel/issues"/>
+  <SupportUrl DefaultValue="https://github.com/yannassoumou/kuroagent/issues"/>
   <AppDomains>
     <AppDomain>https://excel-ten-theta.vercel.app</AppDomain>
   </AppDomains>
