@@ -12,7 +12,7 @@ Sur Windows avec PowerShell :
 
 ```powershell
 # Télécharge le manifest + configure la registry en une commande
-curl -sS https://raw.githubusercontent.com/yannassoumou/kuroagent/main/install.ps1 | pwsh -Command -
+curl -sS https://raw.githubusercontent.com/yannassoumou/kuroagent/main/install.ps1 | powershell -Command -
 ```
 
 Ou télécharge et exécute :
