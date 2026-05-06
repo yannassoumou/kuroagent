@@ -6,24 +6,10 @@ Ce repository contient le manifest pour ajouter l'add-in non officiel permettant
 
 ## Installation
 
-### Manuel (sideloading)
-
-1. Clone le repo `excel` (code source) ou utilise le manifest de ce repo
+1. Télécharge le fichier `manifest.xml` de ce repository
 2. Ouvre Excel
 3. Allez dans **Compléments** → **Compléments personnalisés** → **Charger mon complément**
 4. Sélectionnez le fichier `manifest.xml`
-
-### Mode développeur (localhost)
-
-Pour le développement, le manifest pointe vers `localhost:3000`. Lance le dev server :
-
-```bash
-cd excel/
-npm install
-npm start
-```
-
-Puis sideload le manifest `localhost:3000/manifest.xml` depuis Excel.
 
 ## Prérequis
 
