@@ -6,38 +6,24 @@ Ce repository contient le manifest pour ajouter l'add-in non officiel permettant
 
 ## Installation
 
-### 🚀 One-command install (recommandé)
-
-Sur Windows avec PowerShell :
-
-```powershell
-# Télécharge le manifest + configure la registry en une commande
-iwr https://raw.githubusercontent.com/yannassoumou/kuroagent/main/install.ps1 -UseBasicParsing | Select-Object -ExpandProperty Content | powershell -Command -
-```
-
-Ou télécharge et exécute :
-
-```powershell
-iwr https://raw.githubusercontent.com/yannassoumou/kuroagent/main/install.ps1 -OutFile install.ps1 -UseBasicParsing
-.\install.ps1
-```
-
-Cela fait :
-1. Télécharge `manifest.xml` depuis ce repo
-2. Le sauvegarde dans `%USERPROFILE%\Documents\KuroAgent\`
-3. Crée la registry HKCU pour sideloading automatique
-4. KuroAgent apparaît dans l'onglet **Compléments** d'Excel au prochain démarrage
-
-Pour mettre à jour après un nouveau commit : `.\install.ps1`
-
-Pour désinstaller : `.\install.ps1 -Uninstall`
-
 ### Manuel (sideloading)
 
-1. Clone ce repository ou télécharge `manifest.xml`
+1. Clone le repo `excel` (code source) ou utilise le manifest de ce repo
 2. Ouvre Excel
 3. Allez dans **Compléments** → **Compléments personnalisés** → **Charger mon complément**
 4. Sélectionnez le fichier `manifest.xml`
+
+### Mode développeur (localhost)
+
+Pour le développement, le manifest pointe vers `localhost:3000`. Lance le dev server :
+
+```bash
+cd excel/
+npm install
+npm start
+```
+
+Puis sideload le manifest `localhost:3000/manifest.xml` depuis Excel.
 
 ## Prérequis
 
