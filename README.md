@@ -12,13 +12,13 @@ Sur Windows avec PowerShell :
 
 ```powershell
 # Télécharge le manifest + configure la registry en une commande
-curl -sS https://raw.githubusercontent.com/yannassoumou/kuroagent/main/install.ps1 | powershell -Command -
+iwr https://raw.githubusercontent.com/yannassoumou/kuroagent/main/install.ps1 -UseBasicParsing | Select-Object -ExpandProperty Content | powershell -Command -
 ```
 
 Ou télécharge et exécute :
 
 ```powershell
-iwr https://raw.githubusercontent.com/yannassoumou/kuroagent/main/install.ps1 -OutFile install.ps1
+iwr https://raw.githubusercontent.com/yannassoumou/kuroagent/main/install.ps1 -OutFile install.ps1 -UseBasicParsing
 .\install.ps1
 ```
 
