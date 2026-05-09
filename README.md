@@ -6,10 +6,12 @@ Ce repository contient le manifest pour ajouter l'add-in non officiel permettant
 
 ## Installation
 
-1. Télécharge le fichier `manifest.xml` de ce repository
-2. Ouvre Excel
-3. Allez dans **Compléments** → **Compléments personnalisés** → **Charger mon complément**
-4. Sélectionnez le fichier `manifest.xml`
+1. Ouvrez Excel
+2. Allez dans **Compléments** → **Autres compléments** (ou **Fichier** → **Options** → **Compléments** → **Gérer : Compléments du navigateur** → **Atteindre**)
+3. Ou : **Fichier** → **Compléments** → **Compléments personnalisés** → **Charger mon complément**
+4. Sélectionnez le fichier `manifest.xml` de ce repository
+
+Cet add-in est ajouté temporairement à votre Excel.
 
 ## Prérequis
 
