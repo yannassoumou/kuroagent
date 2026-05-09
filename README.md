@@ -26,6 +26,26 @@ Vous avez besoin d'une clé API pour l'un des providers suivants :
 
 Toutes ces clés sont gratuites pour commencer (crédits d'essai offerts).
 
+### Modèles locaux (gratuit, sans clé API)
+
+Vous pouvez aussi utiliser un LLM en local sur votre machine. Aucune clé API n'est nécessaire.
+
+| Outil | Endpoint par défaut | Lien |
+|-------|---------------------|------|
+| **Ollama** | `http://localhost:11434/v1/chat/completions` | [ollama.com](https://ollama.com) |
+| **LM Studio** | `http://localhost:1234/v1/chat/completions` | [lmstudio.ai](https://lmstudio.ai) |
+| **llama.cpp** | `http://localhost:8080/v1/chat/completions` | [github.com/ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp) |
+| **vLLM** | `http://localhost:8000/v1/chat/completions` | [docs.vllm.ai](https://docs.vllm.ai) |
+| **text-generation-webui** | `http://localhost:5000/v1/chat/completions` | [github.com/oobabooga](https://github.com/oobabooga/text-generation-webui) |
+
+**Comment faire :**
+1. Lancez votre serveur LLM local (ex: `ollama serve`)
+2. Dans les paramètres de l'add-in, entrez l'endpoint local (ex: `http://localhost:11434/v1/chat/completions`)
+3. Laissez le champ API Key vide
+4. Entrez le nom du modèle (ex: `llama3`, `mistral`, `qwen2.5`)
+
+> **Note :** Les requêtes vers `localhost` et `127.0.0.1` sont autorisées par la politique de sécurité de l'add-in.
+
 ## Comment ça marche
 
 L'add-in ajoute des fonctions personnalisées dans Excel qui permettent de faire des requêtes à votre LLM via l'API de votre choix, sans quitter vos feuilles de calcul.
