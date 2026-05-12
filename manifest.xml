@@ -100,7 +100,7 @@
         <bt:String id="TaskpaneButton.Label" DefaultValue="Open KuroAgent"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Connect your OpenRouter API key and chat with any LLM directly in Excel. Powered by Yann Assoumou."/>
+        <bt:String id="GetStarted.Description" DefaultValue="Chat with any LLM directly in Excel. Configure your API key or local LLM endpoint in settings. Open source under MIT License."/>
         <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Open KuroAgent panel to chat with AI"/>
       </bt:LongStrings>
     </Resources>
