@@ -1,13 +1,10 @@
 # kuroagent
 
-Ce repository contient les manifests pour ajouter l'add-in non officiel permettant d'interagir avec votre LLM préféré directement dans **Excel** et **PowerPoint**.
+Ce repository contient le manifest pour ajouter l'add-in non officiel permettant d'interagir avec votre LLM préféré directement dans **Excel**.
 
-| Add-in | Manifest | Statut |
-|--------|----------|--------|
-| **Excel** | `manifest.xml` | ✅ Stable |
-| **PowerPoint** | `manifest_powerpoint.xml` | ✅ Stable |
+> **Note :** L'add-in PowerPoint est encore en développement et ne fonctionne pas encore. Seul le manifest Excel (`manifest.xml`) est fonctionnel.
 
-## Installation Excel
+## Installation
 
 1. Ouvrez Excel
 2. Allez dans **Compléments** → **Autres compléments** (ou **Fichier** → **Options** → **Compléments** → **Gérer : Compléments du navigateur** → **Atteindre**)
@@ -15,15 +12,6 @@ Ce repository contient les manifests pour ajouter l'add-in non officiel permetta
 4. Sélectionnez le fichier `manifest.xml` de ce repository
 
 Cet add-in est ajouté temporairement à votre Excel.
-
-## Installation PowerPoint
-
-1. Ouvrez PowerPoint
-2. Allez dans **Compléments** → **Autres compléments** (ou **Fichier** → **Options** → **Compléments** → **Gérer : Compléments du navigateur** → **Atteindre**)
-3. Ou : **Fichier** → **Compléments** → **Compléments personnalisés** → **Charger mon complément**
-4. Sélectionnez le fichier `manifest_powerpoint.xml` de ce repository
-
-Cet add-in est ajouté temporairement à votre PowerPoint.
 
 ## Prérequis
 
@@ -60,10 +48,7 @@ Vous pouvez aussi utiliser un LLM en local sur votre machine. Aucune clé API n'
 
 ## Comment ça marche
 
-L'add-in s'intègre dans Excel et PowerPoint et permet de faire des requêtes à votre LLM via l'API de votre choix, sans quitter votre application.
-
-- **Excel** : fonctions personnalisées + chat AI pour manipuler vos feuilles de calcul
-- **PowerPoint** : chat AI pour créer, modifier et organiser vos présentations (slides, shapes, textes, tableaux, graphiques)
+L'add-in ajoute des fonctions personnalisées dans Excel qui permettent de faire des requêtes à votre LLM via l'API de votre choix, sans quitter vos feuilles de calcul.
 
 ## Configuration
 
@@ -74,39 +59,6 @@ L'add-in s'intègre dans Excel et PowerPoint et permet de faire des requêtes à
 5. Cliquez sur **Save**
 
 Les paramètres sont sauvegardés localement dans votre navigateur.
-
-## PowerPoint JavaScript API — Fonctionnalités supportées
-
-L'add-in utilise le PowerPoint JavaScript API (Office.js). Voici le support des fonctionnalités :
-
-### Supportées
-
-| Fonctionnalité | Statut | Description |
-|---|---|---|
-| **Slides** | ✅ Supporté | Ajouter, supprimer, renommer des slides |
-| **Texte** | ✅ Supporté | Modifier le texte de n'importe quelle shape |
-| **Shapes** | ✅ Supporté | Ajouter/supprimer des shapes (rectangle, ellipse, triangle, ligne, textbox) |
-| **Tableaux** | ✅ Supporté | Ajouter des tableaux avec lignes/colonnes personnalisées |
-| **Graphiques** | ✅ Supporté | Ajouter des graphiques (column, bar, line, pie, area) |
-| **Images** | ✅ Supporté | Ajouter des images via URL |
-| **Lecture contexte** | ✅ Supporté | Lire toutes les slides, shapes et textes de la présentation |
-| **Chat AI** | ✅ Supporté | Chat avec LLM pour planifier et exécuter des opérations |
-| **Mode explication** | ✅ Supporté | Mode lecture seule pour analyser la présentation sans modifier |
-| **Snapshot/Revert** | ✅ Supporté | Sauvegarde de l'état avant modification, possibilité de revenir en arrière |
-| **Vérification** | ✅ Supporté | Vérification automatique des opérations après exécution |
-
-### Non supportées / Limitations
-
-| Fonctionnalité | Statut | Notes |
-|---|---|---|
-| **Animations** | ❌ Non supporté | Pas d'accès aux animations de slides |
-| **Transitions** | ❌ Non supporté | Pas de contrôle des transitions entre slides |
-| **Thèmes/Design** | ❌ Non supporté | Pas de modification des thèmes de présentation |
-| **Master Slides** | ❌ Non supporté | Pas d'accès aux slides maîtres |
-| **Formules** | ❌ Pas applicable | PowerPoint ne supporte pas les formules |
-| **SmartArt** | ❌ Non supporté | Pas de création ou manipulation de SmartArt |
-
----
 
 ## Excel JavaScript API — Fonctionnalités supportées
 
