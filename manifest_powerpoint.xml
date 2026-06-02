@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
-  <Id>14254940-5dfe-46ec-b860-a8291f526990</Id>
+  <Id>14254940-5dfe-46ec-b860-a8291f526991</Id>
   <Version>0.0.1.0</Version>
   <ProviderName>KuroAgent</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="KuroAgent — AI in Excel-v1.0.8"/>
-  <Description DefaultValue="AI-powered Excel add-in. Chat with your favorite LLM directly in your spreadsheets. Powered by Yann Assoumou."/>
+  <DisplayName DefaultValue="KuroAgent — AI in PowerPoint"/>
+  <Description DefaultValue="AI-powered PowerPoint assistant. Chat with your favorite LLM directly in your presentations. Powered by Yann Assoumou."/>
   <IconUrl DefaultValue="https://excel-ten-theta.vercel.app/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://excel-ten-theta.vercel.app/assets/icon-64.png"/>
   <SupportUrl DefaultValue="https://github.com/yannassoumou/excel/issues"/>
@@ -13,35 +13,16 @@
     <AppDomain>https://excel-ten-theta.vercel.app</AppDomain>
   </AppDomains>
   <Hosts>
-    <Host Name="Workbook"/>
+    <Host Name="Presentation"/>
   </Hosts>
-  <Requirements>
-    <Sets DefaultMinVersion="1.1">
-      <Set Name="CustomFunctionsRuntime" MinVersion="1.1"/>
-    </Sets>
-  </Requirements>
   <DefaultSettings>
     <SourceLocation DefaultValue="https://excel-ten-theta.vercel.app/taskpane.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
     <Hosts>
-      <Host xsi:type="Workbook">
-        <AllFormFactors>
-          <ExtensionPoint xsi:type="CustomFunctions">
-            <Script>
-              <SourceLocation resid="Functions.Script.Url"/>
-            </Script>
-            <Page>
-              <SourceLocation resid="Functions.Page.Url"/>
-            </Page>
-            <Metadata>
-              <SourceLocation resid="Functions.Metadata.Url"/>
-            </Metadata>
-            <Namespace resid="Functions.Namespace"/>
-          </ExtensionPoint>
-        </AllFormFactors>
-      <DesktopFormFactor>
+      <Host xsi:type="Presentation">
+        <DesktopFormFactor>
           <GetStarted>
             <Title resid="GetStarted.Title"/>
             <Description resid="GetStarted.Description"/>
@@ -86,21 +67,17 @@
         <bt:Image id="Icon.80x80" DefaultValue="https://excel-ten-theta.vercel.app/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Functions.Script.Url" DefaultValue="https://excel-ten-theta.vercel.app/functions.js"/>
-        <bt:Url id="Functions.Metadata.Url" DefaultValue="https://excel-ten-theta.vercel.app/functions.json"/>
-        <bt:Url id="Functions.Page.Url" DefaultValue="https://excel-ten-theta.vercel.app/functions.html"/>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/yannassoumou/excel"/>
         <bt:Url id="Commands.Url" DefaultValue="https://excel-ten-theta.vercel.app/commands.html"/>
         <bt:Url id="Taskpane.Url" DefaultValue="https://excel-ten-theta.vercel.app/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="Functions.Namespace" DefaultValue="KUROAGENT"/>
-        <bt:String id="GetStarted.Title" DefaultValue="KuroAgent — AI in Excel"/>
+        <bt:String id="GetStarted.Title" DefaultValue="KuroAgent — AI in PowerPoint"/>
         <bt:String id="CommandsGroup.Label" DefaultValue="KuroAgent"/>
         <bt:String id="TaskpaneButton.Label" DefaultValue="Open KuroAgent"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Chat with any LLM directly in Excel. Configure your API key or local LLM endpoint in settings. Open source under MIT License."/>
+        <bt:String id="GetStarted.Description" DefaultValue="Connect your OpenRouter API key and chat with any LLM directly in PowerPoint. Design and build slides with AI. Powered by Yann Assoumou."/>
         <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Open KuroAgent panel to chat with AI"/>
       </bt:LongStrings>
     </Resources>
