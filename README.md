@@ -1,10 +1,13 @@
 # kuroagent
 
-Ce repository contient le manifest pour ajouter l'add-in non officiel permettant d'interagir avec votre LLM préféré directement dans **Excel**.
+Ce repository contient les manifests pour ajouter l'add-in non officiel permettant d'interagir avec votre LLM préféré directement dans **Excel** et **PowerPoint**.
 
-> **Note :** L'add-in PowerPoint est encore en développement et ne fonctionne pas encore. Seul le manifest Excel (`manifest.xml`) est fonctionnel.
+| Add-in | Manifest | Statut |
+|--------|----------|--------|
+| **Excel** | `manifest.xml` | ✅ Stable |
+| **PowerPoint** | `manifest_powerpoint.xml` | ✅ Stable |
 
-## Installation
+## Installation Excel
 
 1. Ouvrez Excel
 2. Allez dans **Compléments** → **Autres compléments** (ou **Fichier** → **Options** → **Compléments** → **Gérer : Compléments du navigateur** → **Atteindre**)
@@ -12,6 +15,15 @@ Ce repository contient le manifest pour ajouter l'add-in non officiel permettant
 4. Sélectionnez le fichier `manifest.xml` de ce repository
 
 Cet add-in est ajouté temporairement à votre Excel.
+
+## Installation PowerPoint
+
+1. Ouvrez PowerPoint
+2. Allez dans **Compléments** → **Autres compléments** (ou **Fichier** → **Options** → **Compléments** → **Gérer : Compléments du navigateur** → **Atteindre**)
+3. Ou : **Fichier** → **Compléments** → **Compléments personnalisés** → **Charger mon complément**
+4. Sélectionnez le fichier `manifest_powerpoint.xml` de ce repository
+
+Cet add-in est ajouté temporairement à votre PowerPoint.
 
 ## Prérequis
 
@@ -48,7 +60,10 @@ Vous pouvez aussi utiliser un LLM en local sur votre machine. Aucune clé API n'
 
 ## Comment ça marche
 
-L'add-in ajoute des fonctions personnalisées dans Excel qui permettent de faire des requêtes à votre LLM via l'API de votre choix, sans quitter vos feuilles de calcul.
+L'add-in s'intègre dans Excel et PowerPoint et permet de faire des requêtes à votre LLM via l'API de votre choix, sans quitter votre application.
+
+- **Excel** : fonctions personnalisées + chat AI pour manipuler vos feuilles de calcul
+- **PowerPoint** : chat AI pour créer, modifier et organiser vos présentations (slides, shapes, textes, tableaux, graphiques)
 
 ## Configuration
 
@@ -60,45 +75,36 @@ L'add-in ajoute des fonctions personnalisées dans Excel qui permettent de faire
 
 Les paramètres sont sauvegardés localement dans votre navigateur.
 
-## Excel JavaScript API — Fonctionnalités supportées
+## PowerPoint JavaScript API — Fonctionnalités supportées
 
-L'add-in utilise l'Excel JavaScript API (Office.js). Voici le support des fonctionnalités :
+L'add-in utilise le PowerPoint JavaScript API (Office.js). Voici le support des fonctionnalités :
 
 ### Supportées
 
-| Fonctionnalité | Statut | Classes principales |
+| Fonctionnalité | Statut | Description |
 |---|---|---|
-| **PivotTables** | ✅ Supporté | `PivotTable`, `PivotHierarchy`, `PivotField`, `PivotItem`, `PivotLayout`, `PivotFilter` |
-| **Graphiques (Charts)** | ✅ Supporté | `Chart`, `ChartSeries`, `ChartAxis`, `ChartDataLabel`, `ChartTrendline` |
-| **Tableaux** | ✅ Supporté | `Table`, `TableColumn`, `TableRow`, `TableSort`, `AutoFilter`, `Filter` |
-| **Cellules / Ranges** | ✅ Supporté (core) | `Range`, `RangeAreas`, `RangeFormat`, `RangeFont`, `RangeFill`, `RangeBorder` |
-| **Feuilles (Worksheets)** | ✅ Supporté | `Worksheet`, `WorksheetCollection`, `WorksheetProtection`, `PageLayout` |
-| **Classeurs (Workbooks)** | ✅ Supporté | `Workbook`, `Application`, `NamedItem`, `Setting`, `CustomProperty` |
-| **Formatage** | ✅ Supporté | `RangeFormat`, `RangeFont`, `RangeFill`, `RangeBorder`, `Style` |
-| **Formatage conditionnel** | ✅ Supporté | `ConditionalFormat`, `ColorScaleConditionalFormat`, `DataBarConditionalFormat`, `IconSetConditionalFormat` |
-| **Formes (Shapes)** | ✅ Supporté | `Shape`, `GeometricShape`, `Image`, `Line`, `ShapeGroup`, `TextFrame` |
-| **Validation de données** | ✅ Supporté | `DataValidation`, `DataValidationRule`, `BasicDataValidation`, `DateTimeDataValidation` |
-| **Segments (Slicers)** | ✅ Supporté | `Slicer`, `SlicerItem`, `SlicerStyle` |
-| **Commentaires / Notes** | ✅ Supporté | `Comment`, `CommentReply`, `Note` |
-| **Fonctions personnalisées** | ✅ Supporté | `CustomFunctionManager` |
-| **Données liées (Linked Entities)** | ✅ Supporté | `LinkedEntityDataDomain`, `EntityCellValue` |
-| **Power Query** | ✅ Supporté | `Query`, `QueryCollection` |
-| **Contrôles de cellules** | ✅ Supporté | `CheckboxCellControl` |
-| **Calcul itératif** | ✅ Supporté | `IterativeCalculation` |
+| **Slides** | ✅ Supporté | Ajouter, supprimer, renommer des slides |
+| **Texte** | ✅ Supporté | Modifier le texte de n'importe quelle shape |
+| **Shapes** | ✅ Supporté | Ajouter/supprimer des shapes (rectangle, ellipse, triangle, ligne, textbox) |
+| **Tableaux** | ✅ Supporté | Ajouter des tableaux avec lignes/colonnes personnalisées |
+| **Graphiques** | ✅ Supporté | Ajouter des graphiques (column, bar, line, pie, area) |
+| **Images** | ✅ Supporté | Ajouter des images via URL |
+| **Lecture contexte** | ✅ Supporté | Lire toutes les slides, shapes et textes de la présentation |
+| **Chat AI** | ✅ Supporté | Chat avec LLM pour planifier et exécuter des opérations |
+| **Mode explication** | ✅ Supporté | Mode lecture seule pour analyser la présentation sans modifier |
+| **Snapshot/Revert** | ✅ Supporté | Sauvegarde de l'état avant modification, possibilité de revenir en arrière |
+| **Vérification** | ✅ Supporté | Vérification automatique des opérations après exécution |
 
 ### Non supportées / Limitations
 
 | Fonctionnalité | Statut | Notes |
 |---|---|---|
-| **PivotTables OLAP** | ❌ Non supporté | Seuls les PivotTables standards sont supportés |
-| **Power Pivot** | ❌ Non supporté | Pas d'accès aux données Power Pivot |
-| **Sparklines** | ❌ Pas dans l'API | Aucune classe `Sparkline` n'existe |
-| **VBA / Macros** | ❌ Pas dans l'API | Impossible d'exécuter ou créer des macros VBA |
-| **SmartArt** | ❌ Pas dans l'API | Pas de création ou manipulation de SmartArt |
-| **Content Controls** | ❌ Pas dans l'API | Rich Text Content Controls non accessibles |
-| **Onglets ruban intégrés** | ❌ Limité | Accès uniquement au ruban personnalisé via manifest |
-| **Groupe de feuilles** | ❌ Pas dans l'API | Pas de classe `WorksheetGroup` |
-| **Sauvegarde explicite** | ❌ Auto-save | Excel gère la sauvegarde automatiquement |
+| **Animations** | ❌ Non supporté | Pas d'accès aux animations de slides |
+| **Transitions** | ❌ Non supporté | Pas de contrôle des transitions entre slides |
+| **Thèmes/Design** | ❌ Non supporté | Pas de modification des thèmes de présentation |
+| **Master Slides** | ❌ Non supporté | Pas d'accès aux slides maîtres |
+| **Formules** | ❌ Pas applicable | PowerPoint ne supporte pas les formules |
+| **SmartArt** | ❌ Non supporté | Pas de création ou manipulation de SmartArt |
 
 ---
 
