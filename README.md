@@ -1,3 +1,5 @@
+
+
 # kuroagent
 
 Ce repository contient les manifests pour ajouter l'add-in non officiel permettant d'interagir avec votre LLM préféré directement dans **Excel** et **PowerPoint**.
@@ -67,7 +69,7 @@ L'add-in s'intègre dans Excel et PowerPoint et permet de faire des requêtes à
 
 ## Configuration
 
-1. Ouvrez l'add-in via le bouton **KuroAgent** dans l'onglet Accueil
+1. Ouvrez l'add-in via le bouton **Open KuroAgent** dans l'onglet Accueil
 2. Entrez l'URL de l'API de votre provider
 3. Entrez votre clé API (format Bearer)
 4. Choisissez le modèle
